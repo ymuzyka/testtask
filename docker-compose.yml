@@ -34,6 +34,20 @@ services:
         networks:
             - app-network
 
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: pma
+        depends_on:
+            - mysql
+        environment:
+            PMA_HOST: mysql
+            MYSQL_ROOT_PASSWORD: root
+        restart: always
+        ports:
+            - "8081:80"
+        networks:
+            - app-network
+
 networks:
     app-network:
         driver: bridge
