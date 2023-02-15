@@ -19,3 +19,4 @@ Default config:
 - install packages ``` composer install ```
 - start project in docker ``` docker-compose up -d ```
 
+### phpmyadmin 127.0.0.1:8081
